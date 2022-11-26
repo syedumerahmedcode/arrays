@@ -24,7 +24,7 @@
 
 ## Out Of Scope
 
-- To be defined.
+Since this is an beginner project in which the focus is just to learn some basic usages of an array, testing is out of scope of this project.
 
 ## Average Temperature
 
