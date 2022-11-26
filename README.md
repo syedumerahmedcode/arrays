@@ -6,6 +6,7 @@
 - [When to use arrays](#when-to-use-arrays)
 - [Out Of Scope](#out-of-scope)
 - [Average Temperature Calculation](#average-temperature-calculation)
+- [Find missing number](#find-missing-number)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -29,6 +30,10 @@ Since this is an beginner project in which the focus is just to learn some basic
 ## Average Temperature Calculation
 
 We write a Service called _AverageTemperatureService_ which takes number of days and the temperature on that day from the user as input and based on these values not only calculates the average temperature throughout this range but also the number of days on which the temperature recorded is above than the average temperature.
+
+## Find missing number
+
+- To be defined.
 
 ## Project structure
 
