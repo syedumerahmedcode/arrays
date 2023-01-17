@@ -7,15 +7,15 @@ public class SearchInArrayService {
 	 * 
 	 * int[] intArray = {1,2,3,4,5,6}; searchInArray(intArray, 6); // 5
 	 * 
-	 * @param intArray      The input array to look through.
-	 * @param valueToSearch The number to search in the array.
+	 * @param inputOfNumbers The input array to look through.
+	 * @param numberToFind   The number to search in the array.
 	 * @return 0 or positive number if the number is found. Otherwise, -1 is
 	 *         returned.
 	 */
-	public int searchInArray(int[] intArray, int valueToSearch) {
-		for (int i = 0; i < intArray.length; i++) {
-			if (intArray[i] == valueToSearch) {
-				return i;
+	public int searchInArray(int[] inputOfNumbers, int numberToFind) {
+		for (int currentIndex = 0; currentIndex < inputOfNumbers.length; currentIndex++) {
+			if (inputOfNumbers[currentIndex] == numberToFind) {
+				return currentIndex;
 			}
 		}
 		return -1;

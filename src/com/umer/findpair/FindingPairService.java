@@ -2,6 +2,8 @@ package com.umer.findpair;
 
 public class FindingPairService {
 
+	private static final String NO_SOLUTION_FOUND = "No solution found";
+
 	/**
 	 * Write a program to find all pairs of integers whose sum is equal to a given
 	 * number.
@@ -14,20 +16,20 @@ public class FindingPairService {
 	 * 
 	 * Input: nums = [3,2,4], target = 6 Output: [1,2]
 	 * 
-	 * @param nums   the array of numbers to search through.
-	 * @param target The number which should the sum of two numbers.
+	 * @param inputOfNumbers the array of numbers to search through.
+	 * @param numberToFind   The number which should the sum of two numbers.
 	 * @return The indices of the numbers in the array. If no pairs is found, then
 	 *         an IllegalArgumentException is thrown which says "No solution found".
 	 */
-	public int[] twoSum(int[] nums, int target) {
-		for (int i = 0; i < nums.length; i++) {
-			for (int j = i + 1; j < nums.length; j++) {
-				if (nums[i] + nums[j] == target) {
-					return new int[] { i, j };
+	public int[] twoSum(int[] inputOfNumbers, int numberToFind) {
+		for (int firstIndex = 0; firstIndex < inputOfNumbers.length; firstIndex++) {
+			for (int secondIndex = firstIndex + 1; secondIndex < inputOfNumbers.length; secondIndex++) {
+				if (inputOfNumbers[firstIndex] + inputOfNumbers[secondIndex] == numberToFind) {
+					return new int[] { firstIndex, secondIndex };
 				}
 			}
 		}
-		throw new IllegalArgumentException("No solution found");
+		throw new IllegalArgumentException(NO_SOLUTION_FOUND);
 	}
 
 }
