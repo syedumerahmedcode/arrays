@@ -5,6 +5,7 @@ import java.util.Arrays;
 import com.umer.averagetemperature.AverageTemperatureService;
 import com.umer.findpair.FindingPairService;
 import com.umer.missingnumber.MissingNumberService;
+import com.umer.searchinarray.SearchInArrayService;
 
 public class Execute {
 
@@ -26,6 +27,15 @@ public class Execute {
 		int[] intArrayForPairs = { 2, 7, 11, 15 };
 		final int[] result = findingPairService.twoSum(intArrayForPairs, 22);
 		System.out.println(Arrays.toString(result));
+
+		SearchInArrayService searchInArrayService = new SearchInArrayService();
+		int[] intSearch = { 1, 2, 3, 4, 5, 6 };
+		int answer = searchInArrayService.searchInArray(intSearch, 6);
+		if (answer >= 0) {
+			System.out.println("Value is found at the index of " + answer);
+		} else {
+			System.out.println(answer + " value is not found.");
+		}
 
 	}
 
