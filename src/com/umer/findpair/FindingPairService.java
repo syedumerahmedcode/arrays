@@ -14,13 +14,20 @@ public class FindingPairService {
 	 * 
 	 * Input: nums = [3,2,4], target = 6 Output: [1,2]
 	 * 
-	 * @param nums
-	 * @param target
-	 * @return
+	 * @param nums   the array of numbers to search through.
+	 * @param target The number which should the sum of two numbers.
+	 * @return The indices of the numbers in the array. If no pairs is found, then
+	 *         an IllegalArgumentException is thrown which says "No solution found".
 	 */
 	public int[] twoSum(int[] nums, int target) {
-
-		return null;
+		for (int i = 0; i < nums.length; i++) {
+			for (int j = i + 1; j < nums.length; j++) {
+				if (nums[i] + nums[j] == target) {
+					return new int[] { i, j };
+				}
+			}
+		}
+		throw new IllegalArgumentException("No solution found");
 	}
 
 }
