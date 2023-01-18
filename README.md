@@ -8,6 +8,7 @@
 - [Average Temperature Calculation](#average-temperature-calculation)
 - [Find missing number](#find-missing-number)
 - [Finding Pairs](#finding-pairs)
+- [Search in array](#search-in-array)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -101,6 +102,10 @@ If nothing is found, even after the outer loop finishes, the _IllegalArgumentExc
 		throw new IllegalArgumentException(NO_SOLUTION_FOUND);
 	}
 ```
+
+## Search in array
+
+- To be defined.
 
 ## Project structure
 
