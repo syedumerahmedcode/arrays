@@ -105,7 +105,14 @@ If nothing is found, even after the outer loop finishes, the _IllegalArgumentExc
 
 ## Search in array
 
-- To be defined.
+We write a service called _SearchInArrayService_ which takes an integer array containing several numbers and a target number to search as input and checks if the array contains that number.   
+
+```text
+* 
+	 * int[] intArray = {1,2,3,4,5,6}; searchInArray(intArray, 6); // 5
+	 * 
+```
+
 
 ## Project structure
 
