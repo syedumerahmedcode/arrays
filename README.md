@@ -50,8 +50,9 @@ First of all, we loop through the array using a for loop in which we calculate _
 
 ```
 
-Next, we use the Mathematical formula: _Sum of number series from 1,2,3,4,..., (n-2),(n-1),n => n*(n+1)/2 _
-and the simply find the difference as shown below:
+Next, we use the Mathematical formula: 
+_Sum of number series from 1,2,3,4,..., (n-2),(n-1),n => n*(n+1)/2_
+and then simply find the difference as shown below:
 
 ```java
 
