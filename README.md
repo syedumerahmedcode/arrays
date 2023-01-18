@@ -73,7 +73,34 @@ Using this approach, we can find the one missing number in the series without ha
 
 ## Finding pairs
 
-- To be defined.
+We write a service called _FindingPairService_ which takes an integer array containing several random numbers and a target number which is equal to the sum of a pair of numbers.   
+
+```text
+* Examples
+	 * 
+	 * Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because nums[0] +
+	 * nums[1] == 9, we return [0, 1]
+	 * 
+	 * 
+	 * Input: nums = [3,2,4], target = 6 Output: [1,2]
+```
+
+Here, we loop through the array from 0 till the length of the array and inside the for-loop, we loop through a smaller subset of the array, starting from _firstIndex + 1_ till the length of the array. Inside the inner loop, we check if the sum of value at firstIndex and the secondIndex is equal to target number. If yes, the corresponding indices are returned. If the sum is not equal to target, the loop continues.
+
+If nothing is found, even after the outer loop finishes, the _IllegalArgumentException_ is thrown which indicates that no solution is found.
+
+```java
+	public int[] twoSum(int[] inputOfNumbers, int numberToFind) {
+		for (int firstIndex = 0; firstIndex < inputOfNumbers.length; firstIndex++) {
+			for (int secondIndex = firstIndex + 1; secondIndex < inputOfNumbers.length; secondIndex++) {
+				if (inputOfNumbers[firstIndex] + inputOfNumbers[secondIndex] == numberToFind) {
+					return new int[] { firstIndex, secondIndex };
+				}
+			}
+		}
+		throw new IllegalArgumentException(NO_SOLUTION_FOUND);
+	}
+```
 
 ## Project structure
 
