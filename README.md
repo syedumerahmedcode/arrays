@@ -35,7 +35,39 @@ We write a Service called _AverageTemperatureService_ which takes number of days
 
 We write a service called _MissingNumberService_ which takes an integer array containing a number series from _1 till n_ as input and finds out the one missing number in the series. 
 
-It is assumed that the number series is an ascending series which starts from 1 till n but it only skips one number till n. In other words, it does not skip multiple numbers till n.    
+It is assumed that the number series is an ascending series which starts from 1 till n but it only skips one number till n. In other words, it does not skip multiple numbers till n. 
+
+First of all, we loop through the array using a for loop in which we calculate _sumFromArrayElements_ and _numberOfElements_. 
+
+```java
+
+		int sumFromArrayElements = 0;
+		int sumUsingMathematicalNumberSeriesFormula = 0;
+		for (int i : intArray) {
+			sumFromArrayElements += i;
+		}
+		int numberOfElements = intArray.length + 1;
+
+```
+
+Next, we use the Mathematical formula: _Sum of number series from 1,2,3,4,..., (n-2),(n-1),n => n*(n+1)/2 _
+and the simply find the difference as shown below:
+
+```java
+
+		/*
+		 * 
+		 * Mathematical formula: Sum of number series from 1,2,3,4,..., (n-2),(n-1),n
+		 * =>n*(n+1)/2
+		 * 
+		 */
+
+		sumUsingMathematicalNumberSeriesFormula = numberOfElements * (numberOfElements + 1) / 2;
+		int difference = sumUsingMathematicalNumberSeriesFormula - sumFromArrayElements;
+		System.out.println("Missing number is " + difference);
+
+```
+Using this approach, we can find the one missing number in the series without having to loop through the array multiple times.  
 
 ## Project structure
 
