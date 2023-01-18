@@ -7,6 +7,7 @@
 - [Out Of Scope](#out-of-scope)
 - [Average Temperature Calculation](#average-temperature-calculation)
 - [Find missing number](#find-missing-number)
+- [Finding Pairs](#finding-pairs)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -69,6 +70,10 @@ and then simply find the difference as shown below:
 
 ```
 Using this approach, we can find the one missing number in the series without having to loop through the array multiple times.  
+
+## Finding pairs
+
+- To be defined.
 
 ## Project structure
 
