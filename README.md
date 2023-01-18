@@ -109,7 +109,7 @@ If nothing is found, even after the outer loop finishes, the _IllegalArgumentExc
 
 ## Project structure
 
-- To be defined.
+There are several packages, one for each problem, which contain the solution inside a _Service_ class. These service classes are instantiated and called from _main()_ inside the Execute class which can be found inside _com.umer.main_ package.
 
 ## Technologies Used
 
