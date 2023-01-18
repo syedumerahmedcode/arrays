@@ -33,7 +33,9 @@ We write a Service called _AverageTemperatureService_ which takes number of days
 
 ## Find missing number
 
-- To be defined.
+We write a service called _MissingNumberService_ which takes an integer array containing a number series from _1 till n_ as input and finds out the one missing number in the series. 
+
+It is assumed that the number series is an ascending series which starts from 1 till n but it only skips one number till n. In other words, it does not skip multiple numbers till n.    
 
 ## Project structure
 
