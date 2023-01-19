@@ -113,6 +113,17 @@ We write a service called _SearchInArrayService_ which takes an integer array co
 	 * 
 ```
 
+We iterate over the complete array and for each index, we check if the value on this index is equal to the target value we are looking for. If this is the case, the index location is returned. If no match is found, -1 is returned.
+
+```java
+for (int currentIndex = 0; currentIndex < inputOfNumbers.length; currentIndex++) {
+			if (inputOfNumbers[currentIndex] == numberToFind) {
+				return currentIndex;
+			}
+		}
+		return -1;
+```
+
 
 ## Project structure
 
