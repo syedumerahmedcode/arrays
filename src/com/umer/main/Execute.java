@@ -31,7 +31,8 @@ public class Execute {
 
 		SearchInArrayService searchInArrayService = new SearchInArrayService();
 		int[] intSearch = { 1, 2, 3, 4, 5, 6 };
-		int answer = searchInArrayService.searchInArray(intSearch, 6);
+		final int numberToFind = 6;
+		int answer = searchInArrayService.searchInArray(intSearch, numberToFind);
 		if (answer >= 0) {
 			System.out.println("Value is found at the index of " + answer);
 		} else {
