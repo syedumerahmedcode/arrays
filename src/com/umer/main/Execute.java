@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import com.umer.averagetemperature.AverageTemperatureService;
 import com.umer.findpair.FindingPairService;
+import com.umer.maxproduct.MaxProductService;
 import com.umer.missingnumber.MissingNumberService;
 import com.umer.searchinarray.SearchInArrayService;
 
@@ -35,7 +36,13 @@ public class Execute {
 			System.out.println("Value is found at the index of " + answer);
 		} else {
 			System.out.println(answer + " value is not found.");
+
 		}
+
+		MaxProductService maxProductService = new MaxProductService();
+		int[] intMaxProductArray = { 20, 10, 30, 40, 50, 60 };
+		String maxProduct = maxProductService.findMaxProduct(intMaxProductArray);
+		System.out.println(maxProduct);
 
 	}
 

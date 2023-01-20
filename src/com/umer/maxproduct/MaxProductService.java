@@ -14,7 +14,7 @@ public class MaxProductService {
 	 * @return
 	 * @throws Exception
 	 */
-	public String maxProduct(int[] intArray) {
+	public String findMaxProduct(int[] intArray) {
 		int maxProduct = 0;
 		String pairs = "";
 		for (int i = 0; i < intArray.length; i++) {
