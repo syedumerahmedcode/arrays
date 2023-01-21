@@ -9,13 +9,13 @@ public class IsUniqueService {
 	 * 
 	 * int[] intArray = {1,2,3,4,5,6}; isUnique(intArray) // true
 	 * 
-	 * @param intArray
+	 * @param inputArrayToCheck
 	 * @return
 	 */
-	public boolean isUnique(int[] intArray) {
-		for (int i = 0; i < intArray.length; i++) {
-			for (int j = i+1; j < intArray.length; j++) {
-				if (intArray[i] == intArray[j]) {
+	public boolean isUnique(int[] inputArrayToCheck) {
+		for (int firstIndex = 0; firstIndex < inputArrayToCheck.length; firstIndex++) {
+			for (int secondIndex = firstIndex + 1; secondIndex < inputArrayToCheck.length; secondIndex++) {
+				if (inputArrayToCheck[firstIndex] == inputArrayToCheck[secondIndex]) {
 					return false;
 				}
 			}
