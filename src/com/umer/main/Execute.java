@@ -1,9 +1,9 @@
 package com.umer.main;
 
 import java.util.Arrays;
-
 import com.umer.averagetemperature.AverageTemperatureService;
 import com.umer.findpair.FindingPairService;
+import com.umer.isunique.IsUniqueService;
 import com.umer.maxproduct.MaxProductService;
 import com.umer.missingnumber.MissingNumberService;
 import com.umer.searchinarray.SearchInArrayService;
@@ -44,6 +44,12 @@ public class Execute {
 		int[] intMaxProductArray = { 20, 10, 30, 40, 50, 60 };
 		String maxProduct = maxProductService.findMaxProduct(intMaxProductArray);
 		System.out.println(maxProduct);
+
+		IsUniqueService isUniqueService = new IsUniqueService();
+		int[] intIsUniqueArray = { 20, 10, 30, 40, 50, 60 };
+		System.out.println("Is the given array unique: " + isUniqueService.isUnique(intIsUniqueArray));
+		int[] intIsUniqueAnotherArray = { 20, 10, 30, 40, 50, 10 };
+		System.out.println("Is the given array unique: " + isUniqueService.isUnique(intIsUniqueAnotherArray));
 
 	}
 
