@@ -9,6 +9,7 @@
 - [Find missing number](#find-missing-number)
 - [Finding Pairs](#finding-pairs)
 - [Search in array](#search-in-array)
+- [Max product of two integers](#max-product-of-two-integers)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -124,6 +125,29 @@ for (int currentIndex = 0; currentIndex < inputOfNumbers.length; currentIndex++)
 		return -1;
 ```
 
+## Max product of two integers
+
+We write a service called _MaxProductService_ which takes an integer array containing several numbers as input and prints out the pair of numbers which yields the maximum product. Here, it is assumed that all numbers in the input array are positive numbers.
+
+Here, we iterate through the input array twice, once through the whole array and once for each index. Inside the inner for-loop, a product of indices is computed and it is checked against the result already stored inside the method. If the new product is higher than the stored value, then the value is updated. Eventually, the pair yielding the highest result is returned as string.
+
+```java
+int maxProduct = 0;
+		String pairWithMaximumProduct = "";
+		for (int firstIndex = 0; firstIndex < inputArrayOfPositiveNumbers.length; firstIndex++) {
+			for (int secondIndex = firstIndex + 1; secondIndex < inputArrayOfPositiveNumbers.length; secondIndex++) {
+				final int productOfNumbersAtIndices = inputArrayOfPositiveNumbers[firstIndex]
+						* inputArrayOfPositiveNumbers[secondIndex];
+				if (productOfNumbersAtIndices > maxProduct) {
+					maxProduct = productOfNumbersAtIndices;
+					pairWithMaximumProduct = Integer.toString(inputArrayOfPositiveNumbers[firstIndex]) + ","
+							+ Integer.toString(inputArrayOfPositiveNumbers[secondIndex]);
+				}
+			}
+		}
+		return pairWithMaximumProduct;
+```
+        
 
 ## Project structure
 
