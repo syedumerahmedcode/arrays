@@ -10,6 +10,7 @@
 - [Finding Pairs](#finding-pairs)
 - [Search in array](#search-in-array)
 - [Max product of two integers](#max-product-of-two-integers)
+- [Is unique](#is-unique)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -148,6 +149,25 @@ int maxProduct = 0;
 		return pairWithMaximumProduct;
 ```
         
+
+## Is unique
+
+We write a service called _IsUniqueService_ which takes an integer array containing several numbers as input and checks if all the numbers are unique or not.
+
+Here, we iterate through the input array twice, once through the whole array and once for each index. Inside the inner for-loop, we check if the number at the the index from the outer loop is equal to the number at the the index from the inner loop. If they are equal, it means that the numbers are not unique and _false_ is returned immediately. If no repeating numbers are found until both for-loops are completed then _true_ is returned at the end of the method.
+
+```java
+for (int firstIndex = 0; firstIndex < inputArrayToCheck.length; firstIndex++) {
+			for (int secondIndex = firstIndex + 1; secondIndex < inputArrayToCheck.length; secondIndex++) {
+				if (inputArrayToCheck[firstIndex] == inputArrayToCheck[secondIndex]) {
+					return false;
+				}
+			}
+		}
+		return true;
+```
+ 
+
 
 ## Project structure
 
