@@ -5,7 +5,7 @@ public class PermutationService {
 	private static final int ZERO = 0;
 
 	/**
-	 * our are given two integer arrays. Write a program to check if they are
+	 * Our method is given two integer arrays. Write a program to check if they are
 	 * permutation of each other.
 	 * 
 	 * Example
@@ -28,7 +28,7 @@ public class PermutationService {
 			return false;
 		}
 		// Here, we check if the sum and the product of the arrays are same or not.
-		// If both of these values are equal, then the given arrays are permuations of
+		// If both of these values are equal, then the given arrays are permutations of
 		// each other.
 
 		int sumOfFirstArray = ZERO;

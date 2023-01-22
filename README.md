@@ -11,6 +11,7 @@
 - [Search in array](#search-in-array)
 - [Max product of two integers](#max-product-of-two-integers)
 - [Is unique](#is-unique)
+- [Permutation](#permutation)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -167,6 +168,46 @@ for (int firstIndex = 0; firstIndex < inputArrayToCheck.length; firstIndex++) {
 		return true;
 ```
  
+## Permutation
+
+We write a service called _PermutationService_ whihc is given two integer arrays and it checks if they are permutation of each other. _Permutation_ refers to any of the various ways in which a set of things can be ordered. 
+
+Here, we first Check if the length is same or not. If there are not of equal length, then the arrays are not permutations of each other.
+
+```java
+// Check if the length is same or not. If there are not of equal length, then
+		// the arrays are not permutations of each other.
+		if (firstArray.length != secondArray.length) {
+			return false;
+		}
+```
+
+Next up, we we check if the sum and the product of the arrays are same or not. If both of these values are equal, then the given arrays are permutations of each other. Finally, we check if both sums as well as both products are equal. If yes, then we know for sure that both arrays are permutations of each other and _true_ is returned. Else _false_ is returned.
+
+```java
+// Here, we check if the sum and the product of the arrays are same or not.
+		// If both of these values are equal, then the given arrays are permutations of
+		// each other.
+
+		int sumOfFirstArray = ZERO;
+		int sumOfSecondArray = ZERO;
+		int productOfFirstArray = ONE;
+		int productOfSecondArray = ONE;
+
+		for (int index = 0; index < secondArray.length; index++) {
+			sumOfFirstArray += firstArray[index];
+			sumOfSecondArray += secondArray[index];
+
+			productOfFirstArray *= firstArray[index];
+			productOfSecondArray *= secondArray[index];
+		}
+		if (sumOfFirstArray == sumOfSecondArray && productOfFirstArray == productOfSecondArray) {
+			return true;
+		} else {
+			return false;
+		}
+```
+
 
 
 ## Project structure
