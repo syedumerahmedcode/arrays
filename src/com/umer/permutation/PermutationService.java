@@ -1,6 +1,9 @@
 package com.umer.permutation;
 
 public class PermutationService {
+	private static final int ONE = 1;
+	private static final int ZERO = 0;
+
 	/**
 	 * our are given two integer arrays. Write a program to check if they are
 	 * permutation of each other.
@@ -28,10 +31,10 @@ public class PermutationService {
 		// If both of these values are equal, then the given arrays are permuations of
 		// each other.
 
-		int sumOfFirstArray = 0;
-		int sumOfSecondArray = 0;
-		int productOfFirstArray = 1;
-		int productOfSecondArray = 1;
+		int sumOfFirstArray = ZERO;
+		int sumOfSecondArray = ZERO;
+		int productOfFirstArray = ONE;
+		int productOfSecondArray = ONE;
 
 		for (int index = 0; index < secondArray.length; index++) {
 			sumOfFirstArray += firstArray[index];

@@ -6,6 +6,7 @@ import com.umer.findpair.FindingPairService;
 import com.umer.isunique.IsUniqueService;
 import com.umer.maxproduct.MaxProductService;
 import com.umer.missingnumber.MissingNumberService;
+import com.umer.permutation.PermutationService;
 import com.umer.searchinarray.SearchInArrayService;
 
 public class Execute {
@@ -50,6 +51,17 @@ public class Execute {
 		System.out.println("Is the given array unique: " + isUniqueService.isUnique(intIsUniqueArray));
 		int[] intIsUniqueAnotherArray = { 20, 10, 30, 40, 50, 10 };
 		System.out.println("Is the given array unique: " + isUniqueService.isUnique(intIsUniqueAnotherArray));
+
+		PermutationService permutationService = new PermutationService();
+		int[] firstArray = { 1, 2, 3, 4, 5 };
+		int[] secondArray = { 5, 4, 3, 2, 1 };
+		boolean areArrayPermutationsOfEachOther = permutationService.permutation(firstArray, secondArray);
+		System.out.println("Are given arrays permutations of each other: " + areArrayPermutationsOfEachOther);
+
+		int[] anotherFirstArray = { 1, 2, 3, 4, 5 };
+		int[] anotherSecondArray = { 7, 4, 3, 2, 1 };
+		areArrayPermutationsOfEachOther = permutationService.permutation(anotherFirstArray, anotherSecondArray);
+		System.out.println("Are given arrays permutations of each other: " + areArrayPermutationsOfEachOther);
 
 	}
 
