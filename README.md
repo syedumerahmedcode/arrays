@@ -208,6 +208,7 @@ Next up, we we check if the sum and the product of the arrays are same or not. I
 		}
 ```
 
+The advantage of checking sums and products of both arrays is that here, we only need one loop to calculate them since we have already determined that both have equal length(a core condition of both arrays being permutations of each other). Otherwise, a more rudimantory approach would be do solve this problem using two loops but will result in much poorer performance.   
 
 
 ## Project structure
