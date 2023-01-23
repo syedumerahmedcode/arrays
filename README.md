@@ -12,6 +12,7 @@
 - [Max product of two integers](#max-product-of-two-integers)
 - [Is unique](#is-unique)
 - [Permutation](#permutation)
+- [Rotate matrix](#rotate-matrix)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -170,7 +171,7 @@ for (int firstIndex = 0; firstIndex < inputArrayToCheck.length; firstIndex++) {
  
 ## Permutation
 
-We write a service called _PermutationService_ whihc is given two integer arrays and it checks if they are permutation of each other. _Permutation_ refers to any of the various ways in which a set of things can be ordered. 
+We write a service called _PermutationService_ which is given two integer arrays and it checks if they are permutation of each other. _Permutation_ refers to any of the various ways in which a set of things can be ordered. 
 
 Here, we first Check if the length is same or not. If there are not of equal length, then the arrays are not permutations of each other.
 
@@ -209,6 +210,12 @@ Next up, we we check if the sum and the product of the arrays are same or not. I
 ```
 
 The advantage of checking sums and products of both arrays is that here, we only need one loop to calculate them since we have already determined that both have equal length(a core condition of both arrays being permutations of each other). Otherwise, a more rudimantory approach would be do solve this problem using two loops but will result in much poorer performance.   
+
+## Rotate matrix
+
+We write a service called _RotateMatrixService_ which is given an nxn matrix(in the form of a two-dimensional array) as input and rotates it clockwise by 90 degrees.
+
+- TODO: Add pictures drawn on white board which explains the pseudo code and how the rotation is performed.
 
 
 ## Project structure
