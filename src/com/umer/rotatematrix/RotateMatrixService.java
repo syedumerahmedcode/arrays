@@ -24,6 +24,8 @@ public class RotateMatrixService {
 			int last = rows - 1 - layer;
 			// Here we loop through the cells on the current layer
 			for (int i = first; i < last; i++) {
+				// TODO: Needs further comments for better explanation.
+				// Also, needs a visual description on the white board for the readme file.
 				int offset = i - first;
 				int top = matrix[first][i];
 				matrix[first][i] = matrix[last - offset][first];
