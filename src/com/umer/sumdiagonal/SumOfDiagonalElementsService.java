@@ -7,16 +7,19 @@ public class SumOfDiagonalElementsService {
 	 * 
 	 * Example
 	 * 
-	 * myArray2D= {{1,2,3},{4,5,6},{7,8,9}};   
+	 * myArray2D= {{1,2,3},{4,5,6},{7,8,9}};  
 	 * 
 	 * sumDiagonal(myArray2D) # 15
 	 * 
-	 * @param a
+	 * @param inputArray
 	 * @return
 	 */
-	public int sumDiagonal(int[][] a) {
-		return -1;
-
+	public int sumDiagonal(int[][] inputArray) {
+		int sum = 0;
+		for (int index = 0; index < inputArray.length; index++) {
+			sum += inputArray[index][index];
+		}
+		return sum;
 	}
 
 }
