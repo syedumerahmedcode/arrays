@@ -23,7 +23,7 @@ public class BestScoreService {
 	 */
 	public String firstSecond(Integer[] inputArray) {
 		// If we were to only solve it using arrays, then we need to loop through the
-		// entires of the array once and store highest and second highest numbers in two
+		// Entries of the array once and store highest and second highest numbers in two
 		// variables.
 		
 		// However, since we do not have any restrictions on using other classes, we are
