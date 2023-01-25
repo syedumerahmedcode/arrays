@@ -3,6 +3,7 @@ package com.umer.main;
 import java.util.Arrays;
 
 import com.umer.averagetemperature.AverageTemperatureService;
+import com.umer.bestscore.BestScoreService;
 import com.umer.findpair.FindingPairService;
 import com.umer.isunique.IsUniqueService;
 import com.umer.maxproduct.MaxProductService;
@@ -86,6 +87,11 @@ public class Execute {
 		int resultingSumOfDiagonalElements = sumOfDiagonalElementsService
 				.findSumOfDiagonalElements(inputArrayToFindSumOfDiagonalElementsOf);
 		System.out.println("The sum of diagonal elemnts for th given nxn array is: " + resultingSumOfDiagonalElements);
+
+		BestScoreService bestScoreService = new BestScoreService();
+		Integer[] inputArrayToFindBestScores = { 84, 85, 86, 87, 85, 90, 85, 83, 23, 45, 84, 1, 2, 0 };
+		String firstAndSecondBestScores = bestScoreService.determineFirstAndSecondBestScore(inputArrayToFindBestScores);
+		System.out.println("The first and second best scores are: " + firstAndSecondBestScores);
 
 	}
 
