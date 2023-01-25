@@ -14,7 +14,7 @@ public class SumOfDiagonalElementsService {
 	 * @param inputArray
 	 * @return
 	 */
-	public int sumDiagonal(int[][] inputArray) {
+	public int findSumOfDiagonalElements(int[][] inputArray) {
 		int sum = 0;
 		for (int index = 0; index < inputArray.length; index++) {
 			sum += inputArray[index][index];

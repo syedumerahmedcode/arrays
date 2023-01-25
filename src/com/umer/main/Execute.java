@@ -1,6 +1,7 @@
 package com.umer.main;
 
 import java.util.Arrays;
+
 import com.umer.averagetemperature.AverageTemperatureService;
 import com.umer.findpair.FindingPairService;
 import com.umer.isunique.IsUniqueService;
@@ -10,6 +11,7 @@ import com.umer.missingnumber.MissingNumberService;
 import com.umer.permutation.PermutationService;
 import com.umer.rotatematrix.RotateMatrixService;
 import com.umer.searchinarray.SearchInArrayService;
+import com.umer.sumdiagonal.SumOfDiagonalElementsService;
 
 public class Execute {
 
@@ -73,12 +75,18 @@ public class Execute {
 		} else {
 			System.out.println("Failed to rotate the matrix or IMAGE 90 degrees clockwise.");
 		}
-		
-		MiddleFunctionService middleFunctionService=new MiddleFunctionService();
-		int[] inoutArrayForMiddleFunction= {1,2,3,4,5,6,7,8,9,0};
+
+		MiddleFunctionService middleFunctionService = new MiddleFunctionService();
+		int[] inoutArrayForMiddleFunction = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 		final int[] middleOfTheArray = middleFunctionService.findMiddleOfTheArray(inoutArrayForMiddleFunction);
 		System.out.println(Arrays.toString(middleOfTheArray));
-		
+
+		SumOfDiagonalElementsService sumOfDiagonalElementsService = new SumOfDiagonalElementsService();
+		int[][] inputArrayToFindSumOfDiagonalElementsOf = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+		int resultingSumOfDiagonalElements = sumOfDiagonalElementsService
+				.findSumOfDiagonalElements(inputArrayToFindSumOfDiagonalElementsOf);
+		System.out.println("The sum of diagonal elemnts for th given nxn array is: " + resultingSumOfDiagonalElements);
+
 	}
 
 }
