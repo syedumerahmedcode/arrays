@@ -10,11 +10,11 @@ public class MiddleFunctionService {
 	 * 
 	 * myArray = [1, 2, 3, 4] middle(myArray) # [2,3]
 	 * 
-	 * @param arr
+	 * @param inputArray
 	 * @return
 	 */
-	public int[] middle(int[] arr) {
-		return Arrays.copyOfRange(arr, 1, arr.length - 1);
+	public int[] findMiddleOfTheArray(int[] inputArray) {
+		return Arrays.copyOfRange(inputArray, 1, inputArray.length - 1);
 	}
 
 }

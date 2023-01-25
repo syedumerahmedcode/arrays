@@ -5,6 +5,7 @@ import com.umer.averagetemperature.AverageTemperatureService;
 import com.umer.findpair.FindingPairService;
 import com.umer.isunique.IsUniqueService;
 import com.umer.maxproduct.MaxProductService;
+import com.umer.middlefunction.MiddleFunctionService;
 import com.umer.missingnumber.MissingNumberService;
 import com.umer.permutation.PermutationService;
 import com.umer.rotatematrix.RotateMatrixService;
@@ -63,15 +64,21 @@ public class Execute {
 		int[] anotherSecondArray = { 7, 4, 3, 2, 1 };
 		areArrayPermutationsOfEachOther = permutationService.permutation(anotherFirstArray, anotherSecondArray);
 		System.out.println("Are given arrays permutations of each other: " + areArrayPermutationsOfEachOther);
-		
-		RotateMatrixService matrixService=new RotateMatrixService();
-		int[][] matrixToRotate= {{1,2,3},{4,5,6},{7,8,9}};		
-		if(matrixService.rotateMatrix(matrixToRotate)) {
+
+		RotateMatrixService matrixService = new RotateMatrixService();
+		int[][] matrixToRotate = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+		if (matrixService.rotateGivenMatrixOrImage(matrixToRotate)) {
 			System.out.println("The matrix OR IMAGE was rotated 90 degrees clockwise.");
 			System.out.println(Arrays.deepToString(matrixToRotate));
-		}else {
-			System.out.println("Failed to rotate the matrix or IMAGE 90 degrees clockwise.");			
+		} else {
+			System.out.println("Failed to rotate the matrix or IMAGE 90 degrees clockwise.");
 		}
+		
+		MiddleFunctionService middleFunctionService=new MiddleFunctionService();
+		int[] inoutArrayForMiddleFunction= {1,2,3,4,5,6,7,8,9,0};
+		final int[] middleOfTheArray = middleFunctionService.findMiddleOfTheArray(inoutArrayForMiddleFunction);
+		System.out.println(Arrays.toString(middleOfTheArray));
+		
 	}
 
 }
