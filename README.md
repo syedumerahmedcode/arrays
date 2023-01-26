@@ -13,6 +13,7 @@
 - [Is unique](#is-unique)
 - [Permutation](#permutation)
 - [Rotate matrix](#rotate-matrix)
+- [Middle of the array](#middle-of-the-array)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -216,6 +217,19 @@ The advantage of checking sums and products of both arrays is that here, we only
 We write a service called _RotateMatrixService_ which is given an nxn matrix(in the form of a two-dimensional array) as input and rotates it clockwise by 90 degrees.
 
 - TODO: Add pictures drawn on white board which explains the pseudo code and how the rotation is performed.
+
+## Middle of the array
+
+We write a service called _MiddleFunctionService_ which takes a list and returns a new list that contains all but the first and last elements. 
+
+Here, instead of looping through the array and creating a new array without the first and last index, we use the **Arrays.copyOfRange()** method. The code looks like the following:
+
+```java
+public int[] findMiddleOfTheArray(int[] inputArray) {
+		return Arrays.copyOfRange(inputArray, 1, inputArray.length - 1);
+	}
+```
+
 
 
 ## Project structure
