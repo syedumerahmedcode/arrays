@@ -233,7 +233,20 @@ public int[] findMiddleOfTheArray(int[] inputArray) {
 
 ## Sum of Diagonal Elements
 
-We write a service called _SumOfDiagonalElementsService_ which calculates the sum of diagonal elements when a 2 dimensional array is given as input.
+We write a service called _SumOfDiagonalElementsService_ which calculates the sum of diagonal elements when a 2 dimensional array is given as input. 
+
+Here, we loop through the array and calculate the sum of a cell where row and column are the same index. Since the array is already assumed to be 2D(two dimensional) array, we know that rows and columns are the same. Hence, by calculating the sum in this way, we will traverse diagonally in the array.
+
+```java
+int sum = 0;
+		for (int index = 0; index < inputArray.length; index++) {
+			sum += inputArray[index][index];
+		}
+		return sum;
+```
+ 
+
+
 
 
 ## Project structure
