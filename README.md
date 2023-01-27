@@ -14,6 +14,7 @@
 - [Permutation](#permutation)
 - [Rotate matrix](#rotate-matrix)
 - [Middle of the array](#middle-of-the-array)
+- [Sum of Diagonal Elements](#sum-of-diagonal-elements)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -230,6 +231,9 @@ public int[] findMiddleOfTheArray(int[] inputArray) {
 	}
 ```
 
+## Sum of Diagonal Elements
+
+We write a service called _SumOfDiagonalElementsService_ which calculates the sum of diagonal elements when a 2 dimensional array is given as input.
 
 
 ## Project structure
