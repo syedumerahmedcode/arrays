@@ -49,12 +49,12 @@ First of all, we loop through the array using a for loop in which we calculate _
 
 ```java
 
-		int sumFromArrayElements = 0;
-		int sumUsingMathematicalNumberSeriesFormula = 0;
-		for (int i : intArray) {
-			sumFromArrayElements += i;
-		}
-		int numberOfElements = intArray.length + 1;
+int sumFromArrayElements = 0;
+int sumUsingMathematicalNumberSeriesFormula = 0;
+for (int i : intArray) {
+	sumFromArrayElements += i;
+}
+int numberOfElements = intArray.length + 1;
 
 ```
 
@@ -64,16 +64,16 @@ and then simply find the difference as shown below:
 
 ```java
 
-		/*
-		 * 
-		 * Mathematical formula: Sum of number series from 1,2,3,4,..., (n-2),(n-1),n
-		 * =>n*(n+1)/2
-		 * 
-		 */
+/*
+ * 
+ * Mathematical formula: Sum of number series from 1,2,3,4,..., (n-2),(n-1),n
+ * =>n*(n+1)/2
+ * 
+ */
 
-		sumUsingMathematicalNumberSeriesFormula = numberOfElements * (numberOfElements + 1) / 2;
-		int difference = sumUsingMathematicalNumberSeriesFormula - sumFromArrayElements;
-		System.out.println("Missing number is " + difference);
+sumUsingMathematicalNumberSeriesFormula = numberOfElements * (numberOfElements + 1) / 2;
+int difference = sumUsingMathematicalNumberSeriesFormula - sumFromArrayElements;
+System.out.println("Missing number is " + difference);
 
 ```
 Using this approach, we can find the one missing number in the series without having to loop through the array multiple times.  
@@ -84,12 +84,12 @@ We write a service called _FindingPairService_ which takes an integer array cont
 
 ```text
 * Examples
-	 * 
-	 * Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because nums[0] +
-	 * nums[1] == 9, we return [0, 1]
-	 * 
-	 * 
-	 * Input: nums = [3,2,4], target = 6 Output: [1,2]
+* 
+* Input: nums = [2,7,11,15], target = 9 Output: [0,1] Output: Because nums[0] +
+* nums[1] == 9, we return [0, 1]
+* 
+* 
+* Input: nums = [3,2,4], target = 6 Output: [1,2]
 ```
 
 Here, we loop through the array from 0 till the length of the array and inside the for-loop, we loop through a smaller subset of the array, starting from _firstIndex + 1_ till the length of the array. Inside the inner loop, we check if the sum of value at firstIndex and the secondIndex is equal to target number. If yes, the corresponding indices are returned. If the sum is not equal to target, the loop continues.
@@ -97,16 +97,16 @@ Here, we loop through the array from 0 till the length of the array and inside t
 If nothing is found, even after the outer loop finishes, the _IllegalArgumentException_ is thrown which indicates that no solution is found.
 
 ```java
-	public int[] twoSum(int[] inputOfNumbers, int numberToFind) {
-		for (int firstIndex = 0; firstIndex < inputOfNumbers.length; firstIndex++) {
-			for (int secondIndex = firstIndex + 1; secondIndex < inputOfNumbers.length; secondIndex++) {
-				if (inputOfNumbers[firstIndex] + inputOfNumbers[secondIndex] == numberToFind) {
-					return new int[] { firstIndex, secondIndex };
-				}
-			}
+public int[] twoSum(int[] inputOfNumbers, int numberToFind) {
+for (int firstIndex = 0; firstIndex < inputOfNumbers.length; firstIndex++) {
+	for (int secondIndex = firstIndex + 1; secondIndex < inputOfNumbers.length; secondIndex++) {
+		if (inputOfNumbers[firstIndex] + inputOfNumbers[secondIndex] == numberToFind) {
+			return new int[] { firstIndex, secondIndex };
 		}
-		throw new IllegalArgumentException(NO_SOLUTION_FOUND);
 	}
+}
+throw new IllegalArgumentException(NO_SOLUTION_FOUND);
+}
 ```
 
 ## Search in array
@@ -115,19 +115,19 @@ We write a service called _SearchInArrayService_ which takes an integer array co
 
 ```text
 * 
-	 * int[] intArray = {1,2,3,4,5,6}; searchInArray(intArray, 6); // 5
-	 * 
+* int[] intArray = {1,2,3,4,5,6}; searchInArray(intArray, 6); // 5
+* 
 ```
 
 We iterate over the complete array and for each index, we check if the value on this index is equal to the target value we are looking for. If this is the case, the index location is returned. If no match is found, -1 is returned.
 
 ```java
 for (int currentIndex = 0; currentIndex < inputOfNumbers.length; currentIndex++) {
-			if (inputOfNumbers[currentIndex] == numberToFind) {
-				return currentIndex;
-			}
-		}
-		return -1;
+	if (inputOfNumbers[currentIndex] == numberToFind) {
+		return currentIndex;
+	}
+}
+return -1;
 ```
 
 ## Max product of two integers
@@ -138,19 +138,19 @@ Here, we iterate through the input array twice, once through the whole array and
 
 ```java
 int maxProduct = 0;
-		String pairWithMaximumProduct = "";
-		for (int firstIndex = 0; firstIndex < inputArrayOfPositiveNumbers.length; firstIndex++) {
-			for (int secondIndex = firstIndex + 1; secondIndex < inputArrayOfPositiveNumbers.length; secondIndex++) {
-				final int productOfNumbersAtIndices = inputArrayOfPositiveNumbers[firstIndex]
+String pairWithMaximumProduct = "";
+for (int firstIndex = 0; firstIndex < inputArrayOfPositiveNumbers.length; firstIndex++) {
+	for (int secondIndex = firstIndex + 1; secondIndex < inputArrayOfPositiveNumbers.length; secondIndex++) {
+		final int productOfNumbersAtIndices = inputArrayOfPositiveNumbers[firstIndex]
 						* inputArrayOfPositiveNumbers[secondIndex];
-				if (productOfNumbersAtIndices > maxProduct) {
-					maxProduct = productOfNumbersAtIndices;
-					pairWithMaximumProduct = Integer.toString(inputArrayOfPositiveNumbers[firstIndex]) + ","
+		if (productOfNumbersAtIndices > maxProduct) {
+			maxProduct = productOfNumbersAtIndices;
+			pairWithMaximumProduct = Integer.toString(inputArrayOfPositiveNumbers[firstIndex]) + ","
 							+ Integer.toString(inputArrayOfPositiveNumbers[secondIndex]);
-				}
-			}
 		}
-		return pairWithMaximumProduct;
+	}
+}
+return pairWithMaximumProduct;
 ```
         
 
@@ -162,13 +162,13 @@ Here, we iterate through the input array twice, once through the whole array and
 
 ```java
 for (int firstIndex = 0; firstIndex < inputArrayToCheck.length; firstIndex++) {
-			for (int secondIndex = firstIndex + 1; secondIndex < inputArrayToCheck.length; secondIndex++) {
-				if (inputArrayToCheck[firstIndex] == inputArrayToCheck[secondIndex]) {
-					return false;
-				}
-			}
+	for (int secondIndex = firstIndex + 1; secondIndex < inputArrayToCheck.length; secondIndex++) {
+		if (inputArrayToCheck[firstIndex] == inputArrayToCheck[secondIndex]) {
+			return false;
 		}
-		return true;
+	}
+}
+return true;
 ```
  
 ## Permutation
@@ -179,36 +179,36 @@ Here, we first Check if the length is same or not. If there are not of equal len
 
 ```java
 // Check if the length is same or not. If there are not of equal length, then
-		// the arrays are not permutations of each other.
-		if (firstArray.length != secondArray.length) {
-			return false;
-		}
+// the arrays are not permutations of each other.
+if (firstArray.length != secondArray.length) {
+	return false;
+}
 ```
 
 Next up, we we check if the sum and the product of the arrays are same or not. If both of these values are equal, then the given arrays are permutations of each other. Finally, we check if both sums as well as both products are equal. If yes, then we know for sure that both arrays are permutations of each other and _true_ is returned. Else _false_ is returned.
 
 ```java
 // Here, we check if the sum and the product of the arrays are same or not.
-		// If both of these values are equal, then the given arrays are permutations of
-		// each other.
+// If both of these values are equal, then the given arrays are permutations of
+// each other.
 
-		int sumOfFirstArray = ZERO;
-		int sumOfSecondArray = ZERO;
-		int productOfFirstArray = ONE;
-		int productOfSecondArray = ONE;
+int sumOfFirstArray = ZERO;
+int sumOfSecondArray = ZERO;
+int productOfFirstArray = ONE;
+int productOfSecondArray = ONE;
 
-		for (int index = 0; index < secondArray.length; index++) {
-			sumOfFirstArray += firstArray[index];
-			sumOfSecondArray += secondArray[index];
+for (int index = 0; index < secondArray.length; index++) {
+	sumOfFirstArray += firstArray[index];
+	sumOfSecondArray += secondArray[index];
 
-			productOfFirstArray *= firstArray[index];
-			productOfSecondArray *= secondArray[index];
-		}
-		if (sumOfFirstArray == sumOfSecondArray && productOfFirstArray == productOfSecondArray) {
-			return true;
-		} else {
-			return false;
-		}
+	productOfFirstArray *= firstArray[index];
+	productOfSecondArray *= secondArray[index];
+}
+if (sumOfFirstArray == sumOfSecondArray && productOfFirstArray == productOfSecondArray) {
+	return true;
+} else {
+	return false;
+}
 ```
 
 The advantage of checking sums and products of both arrays is that here, we only need one loop to calculate them since we have already determined that both have equal length(a core condition of both arrays being permutations of each other). Otherwise, a more rudimantory approach would be do solve this problem using two loops but will result in much poorer performance.   
@@ -227,8 +227,8 @@ Here, instead of looping through the array and creating a new array without the 
 
 ```java
 public int[] findMiddleOfTheArray(int[] inputArray) {
-		return Arrays.copyOfRange(inputArray, 1, inputArray.length - 1);
-	}
+	return Arrays.copyOfRange(inputArray, 1, inputArray.length - 1);
+}
 ```
 
 ## Sum of Diagonal Elements
@@ -239,10 +239,10 @@ Here, we loop through the array and calculate the sum of a cell where row and co
 
 ```java
 int sum = 0;
-		for (int index = 0; index < inputArray.length; index++) {
-			sum += inputArray[index][index];
-		}
-		return sum;
+for (int index = 0; index < inputArray.length; index++) {
+	sum += inputArray[index][index];
+}
+return sum;
 ```
  
 
