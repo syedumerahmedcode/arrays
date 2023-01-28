@@ -15,6 +15,7 @@
 - [Rotate matrix](#rotate-matrix)
 - [Middle of the array](#middle-of-the-array)
 - [Sum of Diagonal Elements](#sum-of-diagonal-elements)
+- [Finding top 2 best scores](#finding-top-2-best-scores)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -245,7 +246,32 @@ for (int index = 0; index < inputArray.length; index++) {
 return sum;
 ```
  
+## Finding top 2 best scores
 
+We write a service called _BestScoreService_ which, when given an array, gets the first and the second best scores from it. A key point here is that array may contain duplicates(something which will become relevant during the explanation below).
+
+If we were to only solve it using arrays, then we need to loop through the entries of the array once and store highest and second highest numbers in two variables. However, since we do not have any restrictions on using other classes, we are using Collections class.
+
+First we create a duplicate of the input array. Next, we sort the array in descending order. Now, because the array is sorted in descending order, the first element in the array is the biggest number. Second number is initialized to null. Why? Because the input array can contain duplicates so we cannot just blindly take the value at index 1.
+
+We iterate through the length of the array and look out for first number which is different from the first number.	Since, the array is sorted in descending order, we should look for the first number which is different from first number. Why? So that we can avoid duplicates. Now that we have found the second number, there is no need to loop through any further and hence, we break out of the loop.
+
+Finally, the first and second highest number is returned as a string.
+
+```java 
+Integer[] tempArray = inputArray;
+Arrays.sort(tempArray, Collections.reverseOrder());
+int firstNumber = tempArray[0];
+Integer secondNumber = null;
+
+for (int index = 0; index < tempArray.length; index++) {
+	if (tempArray[index] != firstNumber) {
+		secondNumber = tempArray[index];
+			break;
+	}
+}
+return firstNumber + " " + secondNumber;
+```
 
 
 
