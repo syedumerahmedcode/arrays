@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import com.umer.averagetemperature.AverageTemperatureService;
 import com.umer.bestscore.BestScoreService;
+import com.umer.duplicatenumber.DuplicateNumberRemovalService;
 import com.umer.findpair.FindingPairService;
 import com.umer.isunique.IsUniqueService;
 import com.umer.maxproduct.MaxProductService;
@@ -18,6 +19,7 @@ public class Execute {
 
 	public static void main(String[] args) {
 
+		/*
 		System.out.println("Calling Average temperature calculation service");
 		AverageTemperatureService averageTemperatureService = new AverageTemperatureService();
 		averageTemperatureService.calculateAverageTemperature();
@@ -97,6 +99,14 @@ public class Execute {
 		Integer[] inputArrayToFindBestScores = { 84, 85, 86, 87, 85, 90, 85, 83, 23, 45, 84, 1, 2, 0 };
 		String firstAndSecondBestScores = bestScoreService.determineFirstAndSecondBestScore(inputArrayToFindBestScores);
 		System.out.println("The first and second best scores are: " + firstAndSecondBestScores);
+		*/
+		
+		DuplicateNumberRemovalService duplicateNumberRemovalService=new DuplicateNumberRemovalService();
+		int[] arrayContainingDupliactes={1,1, 2, 3, 4,4, 5, 6,6, 7, 7, 8, 8};
+		int[] arrayWithoutDuplicates=duplicateNumberRemovalService.removeDuplicatesForSortedElements(arrayContainingDupliactes);
+		System.out.println("Initial array containing dupliacte elements: "+Arrays.toString(arrayContainingDupliactes));
+		System.out.println("Filtered array which does not contain any dupliacte elements: "+Arrays.toString(arrayWithoutDuplicates));
+		
 
 	}
 
