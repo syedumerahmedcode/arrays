@@ -9,16 +9,16 @@ public class PairSumService {
 	 * 
 	 * pairSum({2, 4, 3, 5, 6, -2, 4, 7, 8, 9},7) Output : "2:5 4:3 3:4 -2:9 "
 	 * 
-	 * @param myArray
-	 * @param sum
+	 * @param inputArrayToFindPairsIn
+	 * @param sumToMatch
 	 * @return
 	 */
-	public String pairSum(int[] myArray, int sum) {
+	public String pairSum(int[] inputArrayToFindPairsIn, int sumToMatch) {
 		String result = "";
-		for (int firstIndex = 0; firstIndex < myArray.length; firstIndex++) {
-			for (int secondIndex = firstIndex + 1; secondIndex < myArray.length; secondIndex++) {
-				if (myArray[firstIndex] + myArray[secondIndex] == sum) {
-					result += myArray[firstIndex] + ":" + myArray[secondIndex] + " ";
+		for (int firstIndex = 0; firstIndex < inputArrayToFindPairsIn.length; firstIndex++) {
+			for (int secondIndex = firstIndex + 1; secondIndex < inputArrayToFindPairsIn.length; secondIndex++) {
+				if (inputArrayToFindPairsIn[firstIndex] + inputArrayToFindPairsIn[secondIndex] == sumToMatch) {
+					result += inputArrayToFindPairsIn[firstIndex] + ":" + inputArrayToFindPairsIn[secondIndex] + " ";
 				}
 			}
 		}
