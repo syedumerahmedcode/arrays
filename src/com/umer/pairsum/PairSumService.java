@@ -14,7 +14,15 @@ public class PairSumService {
 	 * @return
 	 */
 	public String pairSum(int[] myArray, int sum) {
-		return null;
+		String result = "";
+		for (int firstIndex = 0; firstIndex < myArray.length; firstIndex++) {
+			for (int secondIndex = firstIndex + 1; secondIndex < myArray.length; secondIndex++) {
+				if (myArray[firstIndex] + myArray[secondIndex] == sum) {
+					result += myArray[firstIndex] + ":" + myArray[secondIndex] + " ";
+				}
+			}
+		}
+		return result;
 	}
 
 }

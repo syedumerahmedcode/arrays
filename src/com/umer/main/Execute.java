@@ -10,6 +10,7 @@ import com.umer.isunique.IsUniqueService;
 import com.umer.maxproduct.MaxProductService;
 import com.umer.middlefunction.MiddleFunctionService;
 import com.umer.missingnumber.MissingNumberService;
+import com.umer.pairsum.PairSumService;
 import com.umer.permutation.PermutationService;
 import com.umer.rotatematrix.RotateMatrixService;
 import com.umer.searchinarray.SearchInArrayService;
@@ -23,7 +24,6 @@ public class Execute {
 		AverageTemperatureService averageTemperatureService = new AverageTemperatureService();
 		averageTemperatureService.calculateAverageTemperature();
 		System.out.println();
-		
 
 		MissingNumberService missingNumberService = new MissingNumberService();
 		int intArray[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
@@ -31,10 +31,10 @@ public class Execute {
 				52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 74, 75, 76, 77, 78,
 				79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 };
 		missingNumberService.findMissingNumber(intArray);
-		
-		int myArray[] = {1,2,3,4,6};
+
+		int myArray[] = { 1, 2, 3, 4, 6 };
 		final int actualMissingNumber = missingNumberService.findMissingNumber(myArray, 6);
-		System.out.println("The missing number for the given array is: "+actualMissingNumber);
+		System.out.println("The missing number for the given array is: " + actualMissingNumber);
 
 		FindingPairService findingPairService = new FindingPairService();
 		int[] intArrayForPairs = { 2, 7, 11, 15 };
@@ -98,17 +98,28 @@ public class Execute {
 		Integer[] inputArrayToFindBestScores = { 84, 85, 86, 87, 85, 90, 85, 83, 23, 45, 84, 1, 2, 0 };
 		String firstAndSecondBestScores = bestScoreService.determineFirstAndSecondBestScore(inputArrayToFindBestScores);
 		System.out.println("The first and second best scores are: " + firstAndSecondBestScores);
-		
-		DuplicateNumberRemovalService duplicateNumberRemovalService=new DuplicateNumberRemovalService();
-		int[] arrayContainingDupliactes={1,1, 2, 3, 4,4, 5, 6,6, 7, 7, 8, 8};
-		System.out.println("Initial sorted array containing dupliacte elements: "+Arrays.toString(arrayContainingDupliactes));
-		int[] arrayWithoutDuplicates=duplicateNumberRemovalService.removeDuplicatesForSortedElements(arrayContainingDupliactes);
-		System.out.println("Filtered array which does not contain any dupliacte elements: "+Arrays.toString(arrayWithoutDuplicates));
-		
-		int unsortedArrayContainingDuplicates[] = {5,2,6,8,6,7,5,2,8};
-		System.out.println("Initial unsorted array containing dupliacte elements: "+Arrays.toString(unsortedArrayContainingDuplicates));
+
+		DuplicateNumberRemovalService duplicateNumberRemovalService = new DuplicateNumberRemovalService();
+		int[] arrayContainingDupliactes = { 1, 1, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 8 };
+		System.out.println(
+				"Initial sorted array containing dupliacte elements: " + Arrays.toString(arrayContainingDupliactes));
+		int[] arrayWithoutDuplicates = duplicateNumberRemovalService
+				.removeDuplicatesForSortedElements(arrayContainingDupliactes);
+		System.out.println("Filtered array which does not contain any dupliacte elements: "
+				+ Arrays.toString(arrayWithoutDuplicates));
+
+		int unsortedArrayContainingDuplicates[] = { 5, 2, 6, 8, 6, 7, 5, 2, 8 };
+		System.out.println("Initial unsorted array containing dupliacte elements: "
+				+ Arrays.toString(unsortedArrayContainingDuplicates));
 		duplicateNumberRemovalService.removeDuplicatesFromUnsortedArray(unsortedArrayContainingDuplicates);
-		
+
+		PairSumService pairSumService = new PairSumService();
+		int[] inputArrayToFindPairs = { 2, 4, 3, 5, 6, -2, 4, 7, 8, 9 };
+		int sumToMatch = 7;
+		System.out.println("The input array to find pairs in is: " + Arrays.toString(inputArrayToFindPairs)
+				+ " and the sum to match is " + sumToMatch);
+		String pairsFound = pairSumService.pairSum(inputArrayToFindPairs, sumToMatch);
+		System.out.println("The list of pairs that match sum to find (" + sumToMatch + ") are: " + pairsFound);
 
 	}
 
