@@ -1,5 +1,7 @@
 package com.umer.duplicatenumber;
 
+import java.util.LinkedHashSet;
+
 public class DuplicateNumberRemovalService {
 
 	/**
@@ -46,5 +48,17 @@ public class DuplicateNumberRemovalService {
 		a[j++] = a[n - 1];
 		// return the place holder
 		return j;
+	}
+
+	public void removeDuplicatesFromUnsortedArray(int[] a) {
+		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
+
+		// adding elements to LinkedHashSet
+		for (int i = 0; i < a.length; i++)
+			set.add(a[i]);
+
+		// Print the elements of LinkedHashSet   
+		System.out.print("Filtered array which does not contain any dupliacte elements: "+set);
+
 	}
 }
