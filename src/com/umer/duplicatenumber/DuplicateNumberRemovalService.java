@@ -12,50 +12,49 @@ public class DuplicateNumberRemovalService {
 	 * 
 	 * removeDuplicates({1, 1, 2, 2, 3, 4, 5}) Output : [1, 2, 3, 4, 5]
 	 * 
-	 * @param arr
+	 * @param sortedInputArray
 	 * @return
 	 */
-	public int[] removeDuplicatesForSortedElements(int[] arr) {
-		// https://www.geeksforgeeks.org/java-program-to-remove-duplicate-elements-from-the-array/
-		int result = removeDuplicates(arr, arr.length);
+	public int[] removeDuplicatesForSortedElements(int[] sortedInputArray) {
+		int result = removeDuplicates(sortedInputArray, sortedInputArray.length);
 		int[] newArray = new int[result];
 		// Here, we loop through input array again but we only go till the length as
 		// indicated by the place holder from the helper method.
 		for (int i = 0; i < result; i++) {
-			newArray[i] = arr[i];
+			newArray[i] = sortedInputArray[i];
 		}
 		return newArray;
 	}
 
-	private int removeDuplicates(int[] a, int n) {
+	private int removeDuplicates(int[] sortedInputArray, int arrayLength) {
 
-		// If n is 0 or 1 then return n as this is a boundary condition.
-		if (n == 0 || n == 1) {
-			return n;
+		// If array length is 0 or 1 then return n as this is a boundary condition.
+		if (arrayLength == 0 || arrayLength == 1) {
+			return arrayLength;
 		}
 		// Here j will act as a place holder for how many distinct elements are present
 		// in the array.
-		int j = 0;
-		for (int i = 0; i < n - 1; i++) {
+		int placeholder = 0;
+		for (int i = 0; i < arrayLength - 1; i++) {
 			// While looping through all the elements, we check if current element is
 			// different from next element
 			// If yes, we add it at the place holder location and increment the place holder
-			if (a[i] != a[i + 1]) {
-				a[j++] = a[i];
+			if (sortedInputArray[i] != sortedInputArray[i + 1]) {
+				sortedInputArray[placeholder++] = sortedInputArray[i];
 			}
 		}
 		// Finally, we capture the last element.
-		a[j++] = a[n - 1];
+		sortedInputArray[placeholder++] = sortedInputArray[arrayLength - 1];
 		// return the place holder
-		return j;
+		return placeholder;
 	}
 
-	public void removeDuplicatesFromUnsortedArray(int[] a) {
+	public void removeDuplicatesFromUnsortedArray(int[] unsortedInputArray) {
 		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
 
 		// adding elements to LinkedHashSet
-		for (int i = 0; i < a.length; i++)
-			set.add(a[i]);
+		for (int index = 0; index < unsortedInputArray.length; index++)
+			set.add(unsortedInputArray[index]);
 
 		// Print the elements of LinkedHashSet   
 		System.out.print("Filtered array which does not contain any dupliacte elements: "+set);
