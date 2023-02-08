@@ -333,6 +333,24 @@ sortedInputArray[placeholderForUniqueElements++] = sortedInputArray[arrayLength 
 return placeholderForUniqueElements;
 ```
 
+**Q) What if the input array is unsorted?**
+
+In case the input array is unsorted, we can resolve it using **LinkedHashSet** with something like the following:
+
+```java
+public void removeDuplicatesFromUnsortedArray(int[] unsortedInputArray) {
+LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
+
+// adding elements to LinkedHashSet
+for (int index = 0; index < unsortedInputArray.length; index++)
+	set.add(unsortedInputArray[index]);
+
+// Print the elements of LinkedHashSet   
+System.out.print("Filtered array which does not contain any dupliacte elements: "+set);
+
+}
+```
+
 ## Project structure
 
 There are several packages, one for each problem, which contain the solution inside a _Service_ class. These service classes are instantiated and called from _main()_ inside the Execute class which can be found inside _com.umer.main_ package.
