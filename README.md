@@ -284,7 +284,7 @@ removeDuplicates({1, 1, 2, 2, 3, 4, 5}) ---> Output : [1, 2, 3, 4, 5]
 
 Let's have a look at this is done, shall we? 
 
-Initially, we call _public int[] removeDuplicatesForSortedElements(int[] sortedInputArray)_. Inside this method, we call _removeDuplicates(sortedInputArray, sortedInputArray.length)_ which contains the heart of the logic(described in detail soon).
+Initially, we call **public int[] removeDuplicatesForSortedElements(int[] sortedInputArray)**. Inside this method, we call **removeDuplicates(sortedInputArray, sortedInputArray.length)** which contains the heart of the logic(described in detail soon).
 
 ```java
 int result = removeDuplicates(sortedInputArray, sortedInputArray.length);
@@ -302,6 +302,36 @@ for (int i = 0; i < result; i++) {
 return newArray;
 ```
 
+### int removeDuplicates(int[] sortedInputArray, int arrayLength)
+
+This contains the actual logic for removal of duplicate elements and it happens in the following steps. Firstly, we check if array length is 0 or 1 then return n as this is a boundary condition.
+
+```java
+if (arrayLength == 0 || arrayLength == 1) {
+	return arrayLength;
+}
+```
+Next up, we create a variable called placeholderForUniqueElements will act as a place holder for how many distinct elements are present in the array. Now, we loop through all the elements and we check if current element is different from next element. If yes, we add it at the place holder location and increment the place holder.
+
+```java
+int placeholderForUniqueElements = 0;
+for (int i = 0; i < arrayLength - 1; i++) {
+	// While looping through all the elements, we check if current element is
+	// different from next element
+	// If yes, we add it at the place holder location and increment the place holder
+	if (sortedInputArray[i] != sortedInputArray[i + 1]) {
+		sortedInputArray[placeholderForUniqueElements++] = sortedInputArray[i];
+	}
+}
+```
+Finally, we capture the last element and return the place holder for unique elements in the given input array.
+
+```java
+// Finally, we capture the last element.
+sortedInputArray[placeholderForUniqueElements++] = sortedInputArray[arrayLength - 1];
+// return the place holder
+return placeholderForUniqueElements;
+```
 
 ## Project structure
 

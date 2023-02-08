@@ -32,21 +32,21 @@ public class DuplicateNumberRemovalService {
 		if (arrayLength == 0 || arrayLength == 1) {
 			return arrayLength;
 		}
-		// Here j will act as a place holder for how many distinct elements are present
+		// Here placeholderForUniqueElements will act as a place holder for how many distinct elements are present
 		// in the array.
-		int placeholder = 0;
+		int placeholderForUniqueElements = 0;
 		for (int i = 0; i < arrayLength - 1; i++) {
 			// While looping through all the elements, we check if current element is
 			// different from next element
 			// If yes, we add it at the place holder location and increment the place holder
 			if (sortedInputArray[i] != sortedInputArray[i + 1]) {
-				sortedInputArray[placeholder++] = sortedInputArray[i];
+				sortedInputArray[placeholderForUniqueElements++] = sortedInputArray[i];
 			}
 		}
 		// Finally, we capture the last element.
-		sortedInputArray[placeholder++] = sortedInputArray[arrayLength - 1];
+		sortedInputArray[placeholderForUniqueElements++] = sortedInputArray[arrayLength - 1];
 		// return the place holder
-		return placeholder;
+		return placeholderForUniqueElements;
 	}
 
 	public void removeDuplicatesFromUnsortedArray(int[] unsortedInputArray) {
