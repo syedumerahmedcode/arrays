@@ -17,6 +17,7 @@
 - [Sum of Diagonal Elements](#sum-of-diagonal-elements)
 - [Finding top 2 best scores](#finding-top-2-best-scores)
 - [Duplicate Number Removal](#duplicate-number-removal)
+- [Finding Pairs of Sum](#finding-pairs-of-sum)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -350,6 +351,29 @@ System.out.print("Filtered array which does not contain any dupliacte elements: 
 
 }
 ```
+
+## Finding Pairs of Sum
+
+We create a service called _PairSumService_ containing _findPairsOfSum()_ method which is used to find all pairs of an integer array whose sum is equal to a given number. For example:
+
+```text
+pairSum({2, 4, 3, 5, 6, -2, 4, 7, 8, 9},7) Output : "2:5 4:3 3:4 -2:9 "
+```
+
+The way to do it is to loop through the input array and inside it loop through the input array once again but starting from one index ahead in the array. Here, we check if the sum of values at first index and second index in the array equals the given number. If yes, we add it in the result string continue traversing through the array till we reach the end of the input array. Eventually, we return the result.
+
+```java
+String result = "";
+for (int firstIndex = 0; firstIndex < inputArrayToFindPairsIn.length; firstIndex++) {
+	for (int secondIndex = firstIndex + 1; secondIndex < inputArrayToFindPairsIn.length; secondIndex++) {
+		if (inputArrayToFindPairsIn[firstIndex] + inputArrayToFindPairsIn[secondIndex] == sumToMatch) {
+			result += inputArrayToFindPairsIn[firstIndex] + ":" + inputArrayToFindPairsIn[secondIndex] + " ";
+		}
+	}
+}
+return result;
+```
+ 
 
 ## Project structure
 

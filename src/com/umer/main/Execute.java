@@ -118,7 +118,7 @@ public class Execute {
 		int sumToMatch = 7;
 		System.out.println("The input array to find pairs in is: " + Arrays.toString(inputArrayToFindPairs)
 				+ " and the sum to match is " + sumToMatch);
-		String pairsFound = pairSumService.pairSum(inputArrayToFindPairs, sumToMatch);
+		String pairsFound = pairSumService.findPairsOfSum(inputArrayToFindPairs, sumToMatch);
 		System.out.println("The list of pairs that match sum to find (" + sumToMatch + ") are: " + pairsFound);
 
 	}

@@ -13,7 +13,7 @@ public class PairSumService {
 	 * @param sumToMatch
 	 * @return
 	 */
-	public String pairSum(int[] inputArrayToFindPairsIn, int sumToMatch) {
+	public String findPairsOfSum(int[] inputArrayToFindPairsIn, int sumToMatch) {
 		String result = "";
 		for (int firstIndex = 0; firstIndex < inputArrayToFindPairsIn.length; firstIndex++) {
 			for (int secondIndex = firstIndex + 1; secondIndex < inputArrayToFindPairsIn.length; secondIndex++) {
