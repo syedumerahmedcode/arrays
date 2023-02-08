@@ -375,6 +375,7 @@ return result;
 ```
  
 
+
 ## Project structure
 
 There are several packages, one for each problem, which contain the solution inside a _Service_ class. These service classes are instantiated and called from _main()_ inside the Execute class which can be found inside _com.umer.main_ package.
@@ -399,8 +400,8 @@ Feature requests, issues, pull requests and questions are welcome.
 
 ## References
 
-- https://www.udemy.com/course/java-data-structures-and-algorithms-masterclass/
-- https://www.geeksforgeeks.org/java-program-to-remove-duplicate-elements-from-the-array/
+- [1](https://bechtle.udemy.com/course/java-data-structures-and-algorithms-masterclass/learn/): Data Structures and Algorithms from Zero to Hero and Crack Top Companies 100+ Interview questions (Java Coding) **(Udemy)** **(Primary resource)**
+- [2](https://www.geeksforgeeks.org/java-program-to-remove-duplicate-elements-from-the-array/): Java Program to Remove Duplicate Elements From the Array
 
 
 ## Contact Information
