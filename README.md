@@ -16,6 +16,7 @@
 - [Middle of the array](#middle-of-the-array)
 - [Sum of Diagonal Elements](#sum-of-diagonal-elements)
 - [Finding top 2 best scores](#finding-top-2-best-scores)
+- [Duplicate Number Removal](#duplicate-number-removal)
 - [Project structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Prerequisities](#prerequisities)
@@ -273,6 +274,33 @@ for (int index = 0; index < tempArray.length; index++) {
 return firstNumber + " " + secondNumber;
 ```
 
+## Duplicate Number Removal
+
+We write a service called _DuplicateNumberRemovalService_ which, when given an array, removes duplicate numbers from the input array. A key assumption here is that input array is in sorted order. For example:
+
+```text
+removeDuplicates({1, 1, 2, 2, 3, 4, 5}) ---> Output : [1, 2, 3, 4, 5]
+```
+
+Let's have a look at this is done, shall we? 
+
+Initially, we call _public int[] removeDuplicatesForSortedElements(int[] sortedInputArray)_. Inside this method, we call _removeDuplicates(sortedInputArray, sortedInputArray.length)_ which contains the heart of the logic(described in detail soon).
+
+```java
+int result = removeDuplicates(sortedInputArray, sortedInputArray.length);
+```
+
+Once we get back the result(which is essentially the number of unique elements in the array), we iterate through the initial array till the number of distinct elements and return the new (shortened) array.  
+
+```java
+int[] newArray = new int[result];
+// Here, we loop through input array again but we only go till the length as
+// indicated by the place holder from the helper method.
+for (int i = 0; i < result; i++) {
+	newArray[i] = sortedInputArray[i];
+}
+return newArray;
+```
 
 
 ## Project structure
