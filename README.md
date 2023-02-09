@@ -245,6 +245,31 @@ if (rows == 0 || rows != columns) {
 }
 ```
 
+Now, we find out the number of layers that we need to loop through. Please note that **layers=rows/2**.
+
+Once, inside the layer, we loop through the ceels in the current layer and rotate the edges as shown in the code snippet below:
+
+```java
+// find out the number of layers inside the matrix that we need to rotate. hint:
+// layers=rows/2.
+// Here, we loop through the layers
+for (int layer = 0; layer < rows / 2; layer++) {
+	int first = layer;
+	int last = rows - 1 - layer;
+	// Here we loop through the cells on the current layer
+	for (int i = first; i < last; i++) {
+		// Here, we rotate the edges
+		int offset = i - first;
+		int top = matrixOrImageToRotate[first][i];
+		matrixOrImageToRotate[first][i] = matrixOrImageToRotate[last - offset][first];
+		matrixOrImageToRotate[last - offset][first] = matrixOrImageToRotate[last][last - offset];
+		matrixOrImageToRotate[last][last - offset] = matrixOrImageToRotate[last][last - offset];
+		matrixOrImageToRotate[last][last - offset] = matrixOrImageToRotate[i][last];
+		matrixOrImageToRotate[i][last] = top;
+	}
+}
+```
+Finally, at the end, _true_ is returned indicating that the rotation was successful.
 
 ## Middle of the array
 
