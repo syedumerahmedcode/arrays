@@ -218,9 +218,33 @@ The advantage of checking sums and products of both arrays is that here, we only
 
 ## Rotate matrix
 
-We write a service called _RotateMatrixService_ which is given an nxn matrix(in the form of a two-dimensional array) as input and rotates it clockwise by 90 degrees.
+We write a service called _RotateMatrixService_ which is given an nxn matrix(in the form of a two-dimensional array) as input and rotates it clockwise by 90 degrees. So,the given input would transform into the following output shown below:
+
+```text
+[1,2,3]		[7,4,1]		
+[4,5,6] 	=>	[8,5,2]
+[7,8,9] 		[9,6,3]
+```
+
+The pseudo code/process flow of solving this works as follows:
 
 - TODO: Add pictures drawn on white board which explains the pseudo code and how the rotation is performed.
+
+We start with the outer most layer and move the edges 90 degrees. One the outermost layer is rotated, we move one level down and repeat the whole process once more. We keep going further inwards till we reach the middle of the matrix/image.
+
+# Implementation in code
+
+We calculate rows and columns and compare them. If they are not equal, then the input is _not_ a nxn matrix/image. Hence, we exit the logic.
+
+```java
+int rows = matrixOrImageToRotate.length;
+int columns = matrixOrImageToRotate[0].length;
+if (rows == 0 || rows != columns) {
+	// This means that this is not a nxn matrix. Hence, we should return false.
+	return false;
+}
+```
+
 
 ## Middle of the array
 
