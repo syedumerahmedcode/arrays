@@ -228,7 +228,9 @@ We write a service called _RotateMatrixService_ which is given an nxn matrix(in 
 
 The pseudo code/process flow of solving this works as follows:
 
-- TODO: Add pictures drawn on white board which explains the pseudo code and how the rotation is performed.
+**Visual description**
+
+![RotateImageBy90Degrees](https://github.com/syedumerahmedcode/arrays/blob/master/src/main/resources/RotateImageBy90Degrees.jpg)
 
 We start with the outer most layer and move the edges 90 degrees. One the outermost layer is rotated, we move one level down and repeat the whole process once more. We keep going further inwards till we reach the middle of the matrix/image.
 
