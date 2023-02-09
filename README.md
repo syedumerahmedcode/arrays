@@ -386,13 +386,13 @@ There are several packages, one for each problem, which contain the solution ins
 
 ## Prerequisities
 
-- To be defined.
+None.
 
 ## Commands
 
 In order to run the program, one needs to open the project in a suitable IDE(such as Eclipse, STS, VSCode 0or IntelliJ), navigate to the Execute class inside com.umer.main package. Once there, right click---> Run As ---> Java Application.
 
-The program is written in such a way that most of the service currently uses hard-coded values and it does not take any input from the user. However, one can go inside the main() inside Execute class and change the input parameters as one sees fit.
+The program is written in such a way that most of the service currently uses hard-coded values and it does not take any input from the user(apart from the _AverageTemperatureService_). However, one can go inside the main() inside Execute class and change the input parameters as one sees fit.
 
 ## Contribution
 
