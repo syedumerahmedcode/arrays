@@ -3,7 +3,6 @@
 ## Table of content
 
 - [Introduction](#introduction)
-- [When to use arrays](#when-to-use-arrays)
 - [Out Of Scope](#out-of-scope)
 - [Average Temperature Calculation](#average-temperature-calculation)
 - [Find missing number](#find-missing-number)
@@ -28,11 +27,12 @@
 
 ## Introduction
 
-In this project, **arrays** are used to solve various types of interesting problems. What is an array? An _array_ is a data structure of a collection of elements, each of which is identified by an index.   
+In this project, **arrays** are used to solve various types of interesting problems. What is an array? An _array_ is a data structure of a collection of elements, each of which is identified by an index. The time complexities of 1D and 2D arrays are defined in the diagram below:
 
-## When to use arrays
+**Visual description**
 
-- To be defined.
+![TimeComplexitiesOf1DAnd2DArrays](https://github.com/syedumerahmedcode/arrays/blob/master/src/main/resources/TimeComplexitiesOf1DAnd2DArrays.jpg)
+
 
 ## Out Of Scope
 
@@ -214,7 +214,7 @@ if (sumOfFirstArray == sumOfSecondArray && productOfFirstArray == productOfSecon
 }
 ```
 
-The advantage of checking sums and products of both arrays is that here, we only need one loop to calculate them since we have already determined that both have equal length(a core condition of both arrays being permutations of each other). Otherwise, a more rudimantory approach would be do solve this problem using two loops but will result in much poorer performance.   
+The advantage of checking sums and products of both arrays is that here, we only need one loop to calculate them since we have already determined that both have equal length(a core condition of both arrays being permutations of each other). Otherwise, a more simpler approach would be do solve this problem using two loops but will result in much poorer performance.   
 
 ## Rotate matrix
 
