@@ -28,7 +28,7 @@
 
 ## Introduction
 
-- To be defined.
+In this project, **arrays** are used to solve various types of interesting problems. What is an array? An _array_ is a data structure of a collection of elements, each of which is identified by an index.   
 
 ## When to use arrays
 
